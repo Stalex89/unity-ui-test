@@ -34,14 +34,10 @@ public class PlayerExpBar : MonoBehaviour {
 	void Update () 
 	{
 		if (Input.GetKeyDown(KeyCode.E))
-		{
 			PlayerGainExperience(experienceGained);
-		}
 
 		if (Input.GetKeyDown(KeyCode.D))
-		{
 			IncreasePlayerExpGain();
-		}
 
 	}
 
@@ -54,11 +50,13 @@ public class PlayerExpBar : MonoBehaviour {
 			playerCurrentExp = expDiff;
 			playerMaxExp += playerMaxExp * playerMaxExpIncreaseCoef; 
 			UpdatePlayerLevelText();
+			
 			if(expDiff > playerMaxExp)
 				PlayerGainExperience(experience);
 		}
 		else
 			playerCurrentExp += experienceGained;
+
 		playerExpFill.transform.localScale = new Vector3((playerCurrentExp / playerMaxExp),1,1);
 		UpdatePlayerExpValueText();
 		Debug.Log("Gained " + experienceGained + " experience");

@@ -573,11 +573,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812147326}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 158, y: -37.5}
+  m_AnchoredPosition: {x: 530, y: -20}
   m_SizeDelta: {x: 90, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &303223042
@@ -723,12 +723,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812147326}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 52, y: -17}
-  m_SizeDelta: {x: 196, y: 16}
+  m_AnchoredPosition: {x: 12, y: -42}
+  m_SizeDelta: {x: 606, y: 10}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &402201989
 MonoBehaviour:
@@ -791,11 +791,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812147326}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -37.5}
+  m_AnchoredPosition: {x: 10, y: -22}
   m_SizeDelta: {x: 100, y: 20}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &409112268
@@ -2332,12 +2332,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1812147326}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -15}
-  m_SizeDelta: {x: 200, y: 20}
+  m_AnchoredPosition: {x: 10, y: -40}
+  m_SizeDelta: {x: 610, y: 14}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1223187689
 MonoBehaviour:
@@ -2448,7 +2448,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1395782092}
-  - component: {fileID: 1395782093}
+  - component: {fileID: 1395782094}
   m_Layer: 5
   m_Name: PlayerEnergyBar
   m_TagString: Untagged
@@ -2478,7 +2478,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -40}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1395782093
+--- !u!114 &1395782094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -2486,19 +2486,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1395782091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c45ee3cb5a3b304288ae4e9ff794d92, type: 3}
+  m_Script: {fileID: 11500000, guid: e02c78b864c381d4ab9d9e494deed255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxEnergy: 200
-  playerMaxEnergyIncrease: 30
-  playerEnergyRegenPerSecond: 13
-  playerEnergyRegenIncrease: 6
-  playerCurrentEnergy: 20
-  energyConsumed: 30
-  playerEnergyBarWidthIncrease: 10
-  playerEnergyBackground: {fileID: 571275542}
-  playerEnergyFill: {fileID: 145951551}
-  playerEnergyValue: {fileID: 1966222841}
+  barMaxValue: 200
+  barMaxValueIncrease: 30
+  barValueRegenPerSecond: 13
+  barValueRegenIncrease: 6
+  barCurrentValue: 20
+  barReduceValue: 30
+  barWidthIncrease: 10
+  barBackground: {fileID: 571275542}
+  barFill: {fileID: 145951551}
+  barTextValue: {fileID: 1966222841}
+  ReduceCurrentValueKey: 120
+  IncreaseMaxValueKey: 119
+  IncreaseRegenValueKey: 115
 --- !u!1 &1424004576
 GameObject:
   m_ObjectHideFlags: 0
@@ -2977,74 +2980,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1523289215}
---- !u!1 &1755146943
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1755146944}
-  - component: {fileID: 1755146946}
-  - component: {fileID: 1755146945}
-  m_Layer: 5
-  m_Name: PlayerExpIcon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1755146944
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1755146943}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1812147326}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 30, y: 30}
-  m_Pivot: {x: 0, y: 1}
---- !u!114 &1755146945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1755146943}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.5514706, g: 0.4809987, b: 0.18652682, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
---- !u!222 &1755146946
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1755146943}
 --- !u!1 &1762479689
 GameObject:
   m_ObjectHideFlags: 0
@@ -3215,11 +3150,10 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1812147325}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1755146944}
   - {fileID: 1223187688}
   - {fileID: 402201988}
   - {fileID: 303223041}
@@ -3229,8 +3163,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 400, y: 60}
+  m_AnchoredPosition: {x: 250, y: -375}
+  m_SizeDelta: {x: 632.21, y: 60}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1812147327
 MonoBehaviour:
@@ -3490,7 +3424,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1970665625}
-  - component: {fileID: 1970665626}
+  - component: {fileID: 1970665627}
   m_Layer: 5
   m_Name: PlayerHPBar
   m_TagString: Untagged
@@ -3520,7 +3454,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 400, y: 60}
   m_Pivot: {x: 0, y: 1}
---- !u!114 &1970665626
+--- !u!114 &1970665627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
@@ -3528,19 +3462,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 1970665624}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b1b99d4729117f46b6a2b93b1dc5e9e, type: 3}
+  m_Script: {fileID: 11500000, guid: e02c78b864c381d4ab9d9e494deed255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHP: 100
-  playerMaxHPIncrease: 10
-  playerHPRegenPerSecond: 3
-  playerHPRegenIncrease: 3
-  playerCurrentHP: 15
-  damageTaken: 15
-  playerHPBarWidthIncrease: 20
-  playerHPBackground: {fileID: 163954654}
-  playerHPFill: {fileID: 40696544}
-  playerHPValue: {fileID: 434471001}
+  barMaxValue: 100
+  barMaxValueIncrease: 10
+  barValueRegenPerSecond: 3
+  barValueRegenIncrease: 3
+  barCurrentValue: 15
+  barReduceValue: 15
+  barWidthIncrease: 20
+  barBackground: {fileID: 163954654}
+  barFill: {fileID: 40696544}
+  barTextValue: {fileID: 434471001}
+  ReduceCurrentValueKey: 122
+  IncreaseMaxValueKey: 113
+  IncreaseRegenValueKey: 97
 --- !u!1 &2041281610
 GameObject:
   m_ObjectHideFlags: 0

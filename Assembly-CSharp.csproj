@@ -51,10 +51,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\UI\PlayerEnergyBar.cs" />
+     <Compile Include="Assets\Scripts\UI\PlayerBar.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerExpBar.cs" />
-     <Compile Include="Assets\Scripts\UI\PlayerHealthBar.cs" />
      <Compile Include="Assets\Scripts\UI\TogglePanel.cs" />
+     <Compile Include="Assets\Scripts\UI\Unused\PlayerEnergyBar.cs" />
+     <Compile Include="Assets\Scripts\UI\Unused\PlayerHealthBar.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

@@ -10,7 +10,6 @@ public class TogglePanel : MonoBehaviour
 
 	public void TogglePanelFunction()
 	{
-		//PanelCamera.enabled = !PanelCamera.enabled;
 		if(panel.gameObject.activeSelf == true)
 			panel.gameObject.SetActive(false);
 		else panel.gameObject.SetActive(true);
