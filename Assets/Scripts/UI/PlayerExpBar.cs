@@ -18,6 +18,8 @@ public class PlayerExpBar : MonoBehaviour {
 	public Text	playerExpValue;
 	public Text	playerLevelText;
 	public Image playerExpFill;
+	public KeyCode gainExpKey;
+	public KeyCode increaseExpGainKey;
 
 	// Use this for initialization
 	void Start () 
@@ -33,10 +35,10 @@ public class PlayerExpBar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if (Input.GetKeyDown(KeyCode.E))
+		if (Input.GetKeyDown(gainExpKey))
 			PlayerGainExperience(experienceGained);
 
-		if (Input.GetKeyDown(KeyCode.D))
+		if (Input.GetKeyDown(increaseExpGainKey))
 			IncreasePlayerExpGain();
 
 	}
