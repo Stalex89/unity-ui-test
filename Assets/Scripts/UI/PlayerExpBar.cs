@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
+
 public class PlayerExpBar : MonoBehaviour {
 
-	public int playerLevel;
+	int playerLevel;
 	
 	float playerMaxExp;
 
@@ -24,7 +24,7 @@ public class PlayerExpBar : MonoBehaviour {
 	// Use this for initialization
 	void Start () 
 	{
-		playerLevel = 0;
+		playerLevel = 1;
 		playerCurrentExp = 0f;
 		playerMaxExp = 200f;
 		UpdatePlayerExpValueText();

@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[System.Serializable]
 public class PlayerBar : MonoBehaviour {
 	public float barMaxValue;
 	public float barMaxValueIncrease;
 	public float barValueRegenPerSecond;
 	public float barValueRegenIncrease;
-	public float barCurrentValue;
+	float barCurrentValue;
 	public float barReduceValue;
 	float barFillWidth;
 	float barBackgroundWidth;

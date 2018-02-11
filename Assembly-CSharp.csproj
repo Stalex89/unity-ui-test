@@ -51,11 +51,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\UI\FromProject\EnergyController.cs" />
+     <Compile Include="Assets\Scripts\UI\FromProject\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\UI\FromProject\ProgressionManager.cs" />
+     <Compile Include="Assets\Scripts\UI\FromProject\ResourceController.cs" />
+     <Compile Include="Assets\Scripts\UI\FromProject\Timer.cs" />
+     <Compile Include="Assets\Scripts\UI\FromProject\WeaponBase.cs" />
+     <Compile Include="Assets\Scripts\UI\PanelManager.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerBar.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerExpBar.cs" />
-     <Compile Include="Assets\Scripts\UI\TogglePanel.cs" />
      <Compile Include="Assets\Scripts\UI\Unused\PlayerEnergyBar.cs" />
      <Compile Include="Assets\Scripts\UI\Unused\PlayerHealthBar.cs" />
+     <Compile Include="Assets\ScrollListScript.cs" />
+     <Compile Include="Assets\SimpleObjectPool.cs" />
+     <Compile Include="Assets\SkillSlot.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
