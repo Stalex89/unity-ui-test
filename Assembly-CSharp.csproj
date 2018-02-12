@@ -60,6 +60,7 @@
      <Compile Include="Assets\Scripts\UI\PanelManager.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerBar.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerExpBar.cs" />
+     <Compile Include="Assets\Scripts\UI\SkillCoolDown.cs" />
      <Compile Include="Assets\Scripts\UI\Unused\PlayerEnergyBar.cs" />
      <Compile Include="Assets\Scripts\UI\Unused\PlayerHealthBar.cs" />
      <Compile Include="Assets\ScrollListScript.cs" />
