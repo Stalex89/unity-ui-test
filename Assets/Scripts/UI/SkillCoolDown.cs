@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 // Script for UI skill cooldown
@@ -34,10 +35,8 @@ public class SkillCoolDown : MonoBehaviour
 		if(cooldownComplete)
 		{
 			SkillReady();
-			if(Input.GetButtonDown(skillButtonAxisName))
-			{
+			if(Input.GetButtonDown(skillButtonAxisName) && !EventSystem.current.IsPointerOverGameObject())
 				ButtonTriggered();
-			}
 		}
 		else SkillCooldown();
 	}
@@ -57,7 +56,7 @@ public class SkillCoolDown : MonoBehaviour
 		darkMask.fillAmount = (cooldownTimeLeft/cooldownDuration);
 	}
 
-	private void ButtonTriggered()
+	public void ButtonTriggered()
 	{
 		nextReadyTime = cooldownDuration + Time.time;
 		cooldownTimeLeft = cooldownDuration;
