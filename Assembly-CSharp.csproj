@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\UI\FromProject\ResourceController.cs" />
      <Compile Include="Assets\Scripts\UI\FromProject\Timer.cs" />
      <Compile Include="Assets\Scripts\UI\FromProject\WeaponBase.cs" />
+     <Compile Include="Assets\Scripts\UI\PanelDrag.cs" />
      <Compile Include="Assets\Scripts\UI\PanelManager.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerBar.cs" />
      <Compile Include="Assets\Scripts\UI\PlayerExpBar.cs" />
