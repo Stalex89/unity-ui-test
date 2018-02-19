@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\UI\FromProject\EnergyController.cs" />
+     <Compile Include="Assets\Scripts\UI\FromProject\PanelDraggable.cs" />
      <Compile Include="Assets\Scripts\UI\FromProject\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\UI\FromProject\ProgressionManager.cs" />
      <Compile Include="Assets\Scripts\UI\FromProject\ResourceController.cs" />
