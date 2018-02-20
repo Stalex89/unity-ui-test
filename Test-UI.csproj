@@ -290,10 +290,10 @@
     <Compile Include="Assets\Scripts\UI\FromProject\Timer.cs" />
     <Compile Include="Assets\Scripts\UI\FromProject\WeaponBase.cs" />
     <Compile Include="Assets\Scripts\UI\LvlUpManager.cs" />
-    <Compile Include="Assets\Scripts\UI\PanelManager.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerBar.cs" />
     <Compile Include="Assets\Scripts\UI\PlayerExpBar.cs" />
     <Compile Include="Assets\Scripts\UI\SkillCoolDown.cs" />
+    <Compile Include="Assets\Scripts\UI\TogglePanel.cs" />
     <Compile Include="Assets\Scripts\UI\Unused\PanelDrag.cs" />
     <Compile Include="Assets\Scripts\UI\Unused\PanelDraggable.cs" />
     <Compile Include="Assets\Scripts\UI\Unused\PlayerEnergyBar.cs" />

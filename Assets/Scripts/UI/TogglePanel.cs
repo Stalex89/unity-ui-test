@@ -3,22 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PanelManager : MonoBehaviour 
+public class TogglePanel: MonoBehaviour 
 {
-
-	// public GameObject panel;
-
-	// public void TogglePanelFunction()
-	// {
-	// 	if(panel.gameObject.activeSelf == true)
-	// 		panel.gameObject.SetActive(false);
-	// 	else panel.gameObject.SetActive(true);
-
-	// }
 
 	GameObject openedPanel;
 
-	public void TogglePanel(GameObject currentPanel)
+	public void Paneltoggle(GameObject currentPanel)
 	{
 		if (openedPanel != null)
 			openedPanel.gameObject.SetActive(false);

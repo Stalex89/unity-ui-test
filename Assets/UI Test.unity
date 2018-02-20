@@ -2862,7 +2862,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1514206441}
-        m_MethodName: TogglePanel
+        m_MethodName: Paneltoggle
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 737747100}
@@ -4005,7 +4005,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 790126650}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1002080292}
+        m_MethodName: OnSubmit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &790126650
@@ -4127,7 +4138,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1132481608}
-  - {fileID: 1359103210}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4712,7 +4722,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1514206441}
-        m_MethodName: TogglePanel
+        m_MethodName: Paneltoggle
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2041281610}
@@ -4878,6 +4888,7 @@ GameObject:
   - component: {fileID: 1002080290}
   - component: {fileID: 1002080289}
   - component: {fileID: 1002080288}
+  - component: {fileID: 1002080292}
   m_Layer: 5
   m_Name: LvlUpPanelCanvas
   m_TagString: Untagged
@@ -4961,6 +4972,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1002080292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1002080287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77cdd6a3848acc4fbfc73b081c02868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toggleGroup: {fileID: 718875315}
+  pointsValueText: {fileID: 1088686124}
+  pointsAvailable: 10
 --- !u!1 &1048748020
 GameObject:
   m_ObjectHideFlags: 0
@@ -5184,7 +5209,7 @@ GameObject:
   - component: {fileID: 1088686125}
   - component: {fileID: 1088686124}
   m_Layer: 5
-  m_Name: SkillPointsValueText
+  m_Name: PointsValueText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5240,7 +5265,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: PVT
 --- !u!222 &1088686125
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5476,7 +5501,7 @@ GameObject:
   - component: {fileID: 1118790925}
   - component: {fileID: 1118790924}
   m_Layer: 5
-  m_Name: SkillPointsText
+  m_Name: PointsText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5532,7 +5557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Skill points:'
+  m_Text: 'Points available:'
 --- !u!222 &1118790925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6359,47 +6384,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1347244343}
---- !u!1 &1359103209
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1359103210}
-  - component: {fileID: 1359103211}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1359103210
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1359103209}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.7609912, y: -0.33564246, z: 2.606465}
-  m_LocalScale: {x: 0.41666663, y: 0.41666663, z: 0.41666663}
-  m_Children: []
-  m_Father: {fileID: 793837416}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1359103211
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1359103209}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -1184210157, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AllowSwitchOff: 1
 --- !u!1 &1395782091
 GameObject:
   m_ObjectHideFlags: 0
