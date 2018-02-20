@@ -283,6 +283,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\UI\DragPanel.cs" />
+    <Compile Include="Assets\Scripts\UI\DragSkill.cs" />
+    <Compile Include="Assets\Scripts\UI\DropSkill.cs" />
     <Compile Include="Assets\Scripts\UI\FromProject\EnergyController.cs" />
     <Compile Include="Assets\Scripts\UI\FromProject\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\UI\FromProject\ProgressionManager.cs" />

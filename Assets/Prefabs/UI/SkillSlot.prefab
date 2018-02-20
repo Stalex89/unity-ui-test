@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 224395676416091198}
   - component: {fileID: 222048907133971328}
   - component: {fileID: 114898223307950898}
+  - component: {fileID: 114686589315372160}
   m_Layer: 5
   m_Name: SkillIconImage
   m_TagString: Untagged
@@ -282,6 +283,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114686589315372160
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1424917361982572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84cd2dd401a4cc24dacd83e2a49b86b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragOnSurfaces: 0
 --- !u!114 &114898223307950898
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -294,14 +307,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.4705882, g: 0.14878891, b: 0.14878891, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4c025d9eb27f66d4f8d70e65d532b53a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

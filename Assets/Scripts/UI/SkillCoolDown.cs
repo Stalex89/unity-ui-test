@@ -9,8 +9,11 @@ public class SkillCoolDown : MonoBehaviour
 {
 	public string skillButtonAxisName;
 	public Image skillIcon;
+    public Image charPanelSkillIcon;
 	public Image darkMask;
+    public Image charPanelDarkMask;
 	public Text cooldownText;
+    public Text charPanelCooldownText;
 
 	[HideInInspector]
 	public float cooldownTimeLeft;
@@ -18,14 +21,11 @@ public class SkillCoolDown : MonoBehaviour
 	public float nextReadyTime;
 	public float cooldownDuration;
 	
-	public void Initialize()
-	{
-		SkillReady();
-	}
+
 
 	void Start()
-	{	
-		Initialize();
+	{
+        SkillReady();
 	}
 
 
@@ -41,20 +41,29 @@ public class SkillCoolDown : MonoBehaviour
 		else SkillCooldown();
 	}
 
-	// Disable cooldown text and mask when skill is ready
-	private void SkillReady()
+    public void Initialize( /*Assume we have Skill class object passedd*/)
+    {
+        // Here we initialize all fields with object fields
+    }
+
+    // Disable cooldown text and mask when skill is ready
+    private void SkillReady()
 	{
 		cooldownText.enabled = false;
 		darkMask.enabled = false;
-	}
+        charPanelCooldownText.enabled = false;
+        charPanelDarkMask.enabled = false;
+    }
 
 	private void SkillCooldown()
 	{
 		cooldownTimeLeft -= Time.deltaTime;
 		float roundedCooldown = Mathf.Round(cooldownTimeLeft);
 		cooldownText.text = roundedCooldown.ToString();
-		darkMask.fillAmount = (cooldownTimeLeft/cooldownDuration);
-	}
+        charPanelCooldownText.text = roundedCooldown.ToString();
+        darkMask.fillAmount = (cooldownTimeLeft/cooldownDuration);
+        charPanelDarkMask.fillAmount = (cooldownTimeLeft / cooldownDuration);
+    }
 
 	public void ButtonTriggered()
 	{
@@ -62,9 +71,11 @@ public class SkillCoolDown : MonoBehaviour
 		cooldownTimeLeft = cooldownDuration;
 		darkMask.enabled = true;
 		cooldownText.enabled = true;
+        charPanelCooldownText.enabled = true;
+        charPanelDarkMask.enabled = true;
 
-		// Call skill initialization
-	}
+        // Call skill initialization
+    }
 
 }
 
