@@ -4905,7 +4905,7 @@ Prefab:
     - target: {fileID: 114686589315372160, guid: ab21c64e16ec0354dbc337906a79162a,
         type: 2}
       propertyPath: dragOnSurfaces
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 114898223307950898, guid: ab21c64e16ec0354dbc337906a79162a,
         type: 2}
