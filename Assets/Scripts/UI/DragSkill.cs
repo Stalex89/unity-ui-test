@@ -7,9 +7,6 @@ using UnityEngine.UI;
 public class DragSkill : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public bool dragOnSurfaces = true;
-
-
-    
     private Dictionary<int, GameObject> m_DraggingIcons = new Dictionary<int, GameObject>();
     private Dictionary<int, RectTransform> m_DraggingPlanes = new Dictionary<int, RectTransform>();
 
@@ -32,6 +29,7 @@ public class DragSkill : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDra
         var group = m_DraggingIcons[eventData.pointerId].AddComponent<CanvasGroup>();
         group.blocksRaycasts = false;
 
+        image.rectTransform.sizeDelta = new Vector2(50.0f, 50.0f);
         image.sprite = GetComponent<Image>().sprite;
         //image.SetNativeSize();
 
