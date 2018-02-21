@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerBar : MonoBehaviour {
+public class PlayerBar : MonoBehaviour
+{
 	public float barMaxValue;
 	public float barMaxValueIncrease;
 	public float barValueRegenPerSecond;
